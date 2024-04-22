@@ -16,6 +16,7 @@ namespace MvcCoreChollometro.Controllers
         public IActionResult Index()
         {
             List<Chollo> chollos = this.repo.GetChollos();
+            ViewData["ELEMENTOS"] = chollos.Count;
             return View(chollos);
         }
     }
